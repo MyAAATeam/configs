@@ -1,0 +1,11 @@
+# JetBrains
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.env
+venv
+
+# Logs
+*.log
