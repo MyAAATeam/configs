@@ -1,0 +1,51 @@
+main:
+  api_token: api_token
+  buffers_size: 450
+  cache_db_name: 2
+  cache_host: 127.0.0.1
+  cache_port: '6379'
+  delay: 1
+  doc_service_server: https://upload-docs-sandbox.prozorro.gov.ua
+  doc_service_port: 443
+  doc_service_user: test
+  doc_service_password: test
+  empty_stack_sync_delay: 101
+  full_stack_sync_delay: 15
+  on_error_sleep_delay: 5
+  proxy_password: robot
+  proxy_port: 20607
+  proxy_server: http://127.0.0.1
+  proxy_user: robot
+  proxy_version: 1.0
+  public_tenders_api_server: http://127.0.0.1:6543
+  tenders_api_server: http://127.0.0.1:6543
+  tenders_api_version: '2.4'
+  time_to_live: 1800
+  time_to_live_negative: 120
+
+version: 1
+loggers:
+  root:
+    level: "DEBUG"
+    handlers:
+      - "console"
+  openprocurement:
+    level: "DEBUG"
+    qualname: "openprocurement"
+  console:
+    class: "StreamHandler"
+    args: "(sys.stderr,)"
+    level: "NOTSET"
+    formatter: "generic"
+  exc_logger:
+    level: "ERROR"
+    qualname: "console"
+    propagate: "0"
+handlers:
+  console:
+    class: 'logging.StreamHandler'
+    level: 'INFO'
+formatters:
+  generic:
+    class: 'logging.Formatter'
+    format: "%(asctime)s %(levelname)-5.5s [%(name)s][%(threadName)s] %(message)s"
