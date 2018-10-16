@@ -13,4 +13,4 @@ https://github.com/ProzorroUKR/openprocurement.documentservice.buildout
 
 ## Run
 
-`etc/service.ini --reload`
+`bin/pserve etc/service.ini --reload`
