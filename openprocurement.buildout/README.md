@@ -10,6 +10,9 @@ https://github.com/ProzorroUKR/openprocurement.buildout
 - `python bootstrap.py`
 - `bin/buildout -N`
 
+## In some environments required
+
+- `apt install libsodium-dev`
 
 ## Run
 
